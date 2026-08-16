@@ -1,0 +1,689 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath,amssymb,amsthm} % For \text command
+\usepackage{hyperref}
+
+\newtheorem*{claim}{Claim}
+
+\title{Solutions to MIRA}
+\author{Aditya Padiyar}
+\date{December 2025}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+This document contains solutions to the textbook MIRA, available at \\ measure.axler.net
+
+\section*{Chapter 1}
+\subsection*{1A}
+\begin{itemize}
+    \item [1] We have $\sum_{j=1}^n(x_j-x_{j-1})\text{inf}_{[x_{j-1},x_j]}f=\sum_{j=1}^n(x_j-x_{j-1})\text{sup}_{[x_{j-1},x_j]}f$. Hence, f is constant on each interval. Since each interval intersects the next interval at the endpoints, f is constant.
+    \item [2]
+    $L(f,P,[a,b])$ is the sum of the lengths of intervals contained in $(s,t)$. Clearly, the supremum of this is $t-s$. Similarly, $U(f,P,[a,b]$ is the sum of the lengths of intervals that intersect $(s,t)$. Clearly, the infimum of this is $t-s$
+    \item [3] See Theorem 6.6 of Rudin
+    \item [4] See Theorem 6.12 of Rudin
+    \item [5] See Theorem 6.12 of Rudin
+    \item [6]
+    We need to prove that a function that is zero except at finitely many points has zero integral. Let $|f(x)|\leq M$, with $k$ nonzero points. We have $U(f,P_n,[a,b])\leq 2kM/n$ and $L(f,P_n,[a,b] \geq -2kM/n$
+    
+    \item [7]
+    RHS = sup $L(f,P_n,[a,b]) \leq $ LHS. Let $P$ be a partition. We need to prove sup $L(f,P_n,[a,b]) > L(f,P,[a,b])-\epsilon$. So we need to show $L(f,P_n,[a,b]) > L(f,P,[a,b])-\epsilon$ for some n.
+
+    Let $P$ be $x_0,x_1,..x_k$. Now consider 
+    \[L(f,P_n,[a,b])=\sum_{I}l(I)\text{ inf}_{I}f=\sum_{I \text{ containing }x_i}l(I)\text{ inf}_{I}f+\sum_{\text{other }I}l(I)\text{ inf}_{I}f\]
+    
+    \[\geq-2(k+1)\frac{b-a}{2^n}M+
+    \sum_{j=1}^k \text{inf}_{[x_{j-1},x_j]}\sum_{I \subseteq(x_{j-1},x_j)} l(I)\]
+
+    For large enough $n$ we have what we want.
+
+    \item[8] Let $c_n=\frac{b-a}{n}\sum_{j=1}^nf(a+\frac{j(b-a)}{n})$. Let $P_n$ be the partition into $n$ equally spaced intervals. Then $L(P_n,f,[a,b])\leq c_n\leq U(P_n,f,[a,b])$. By Problem 7 and the sandwich theorem, we have what we want.
+    
+    \item[9]
+    Let $\epsilon > 0$. There is a partition $P$ of $[a,b]$ with $U(f,P)-L(f,P) < \epsilon$, and we can assume this partition has the points c and d. Restricting this partition to $[c,d]$ does the job.
+    \item[10]
+    Problem 9 proves one direction of the required equivalence. To prove the other direction of the equivalence, let $\epsilon > 0$. We get partitions $P_1$ and $P_2$ of $[a,c]$ and $[c,b]$ with $U(P_1,f,[a,c])-L(P_1,f,[a,c]),U(P_2,f,[c,b])-L(P_2,f,[c,b]) < \epsilon/2$. Clubbing these partitions accomplishes the task. Now the integral over $[a,b]$ is the supremum of $L(P,f,[a,b])$ where $P$ is a partition containing $c$. This can be split into 2 parts which is the RHS
+    \item[11] See Rudin 6.20
+    \item[12]
+    $-|f|\leq f \leq |f|$, so $-\int |f|\leq \int f \leq \int |f|$
+    \item[13]
+    $U(f,P,[a,b])-L(f,P,[a,b])= \sum(f(x_j)-f(x_{j-1}))(x_j-x_{j-1})$. Now use the equally spaced partition $P_n$
+    \item[14]
+    See Rudin 7.16
+    
+    
+    
+\end{itemize}
+
+\subsection*{1B}
+
+\begin{itemize}
+    \item[1] 
+    All $L(P,f)$ are zero. The number of rational numbers with denominator $k$ is at most $k+1$. Hence, the number of rational numbers with denominator at most $k$ is $\leq$ $(k+1)(k+2)/2$. $U(P_n,f)= \frac{1}{n}\sum M_j \leq \frac{1}{n}((k+1)(k+2) + \frac{n}{k+1})$ which can be made arbitrarily small
+    \item[2]
+    $L(-f,P,[a,b])=- \sum (x_j-x_{j-1}) \text{sup}_{[x_{j-1},x_j]} f= -U(P,f,[a,b])$
+    \item [3]
+    $L(f+g,P,[a,b]\geq L(f,P,[a,b])+L(g,P,[a,b])$. Now, take the supremum.
+    \item[4]
+    Take $\chi_\mathbb{Q}$ and $\chi_{\mathbb{R} \setminus \mathbb{Q}}$
+    \item[5]
+    See example 7.6 of Rudin
+\end{itemize}
+
+\section*{Chapter 2}
+\subsection*{2A}
+\begin{itemize}
+    \item[1] LHS $\leq$ RHS by countable sub additivity. The other direction follows by inclusion
+    \item[2]  $I_1,I_2,..$ are open intervals that cover A if and only if $tI_1,tI_2,..$ are open intervals that cover $tA$.
+    \item[3]
+    $B= (B\setminus A )\sqcup (B \cap A)$. Now use countable sub additivity
+    \item[4]
+    See Heine-Borel theorem
+    \item[5]
+    See Theorem 26.9, Munkres
+    \item[6]
+    $(a,b)\cup\{a\}\cup\{b\}=[a,b]$. Now use countable sub additivity and inclusion.
+    \item[7]
+    The implication from LHS to RHS is obvious. For the other direction, see Problem 11
+    \item[8]
+    LHS $\leq$ RHS follows by countable sub additivity. Let $I_1,I_2..$ be open intervals that cover $A$. Then $I_1\cap(-t,t),I_2\cap(-t,t)...,$ cover $A\cap(-t,t)$, $I_1\cap(t,\infty),I_2\cap(t,\infty)...,$ cover $A\cap(t,\infty)$,  $I_1\cap(-\infty,-t),I_2\cap(-\infty,-t)...,$ cover $A\cap(-\infty,-t)$. We have $\sum l(I_k)\geq \sum l(I_k \cap(-t,t)+\sum l(I_k \cap(t,\infty)+\sum l(I_k \cap(-\infty,-t)\geq |A\cap(-t,t)|+|A\cap(t,\infty)|+|A\cap(-\infty,t)|$. Now use countable sub additivity
+    \item[10]
+    Use countable sub additivity and inclusion
+    \item[11]
+    
+    Let $\{J_k\}$ be open intervals covering $\bigcup I_k$. We need to show
+    \[- \epsilon +\sum_{k=1}^Nl(I_k)  \leq \sum_{k=1}^{M}l(J_k)\] for some $M$. Let $I_k=(a_k,b_k)$. 
+    
+    It suffices to show \[\sum_{k=1}^Nl(a_k+\frac{\epsilon}{2N},b_k-\frac{\epsilon}{2N}) \leq \sum_{k=1}^{M}l(J_k)\]
+    
+    $(a_k+\frac{\epsilon}{2N},b_k-\frac{\epsilon}{2N})$ is covered by finitely many intervals $\{J_i\}_{i\in S_k}$
+
+    $(a_k+\frac{\epsilon}{2N},b_k-\frac{\epsilon}{2N})=\bigcup_{i \in S_k} J_i \cap (a_k+\frac{\epsilon}{2N},b_k-\frac{\epsilon}{2N})$, so
+    \[\sum_{k=1}^N l(a_k+\frac{\epsilon}{2N},b_k-\frac{\epsilon}{2N}) \leq \sum_{k=1}^N \sum_{i \in \cup S_k}l(J_i \cap (a_k+\frac{\epsilon}{2N},b_k-\frac{\epsilon}{2N})) \]
+
+    Now $\{J_i\cap (a_k+\frac{\epsilon}{2N},b_k-\frac{\epsilon}{2N})\}_k$ are disjoint open intervals within $J_i$. Hence we have $l(J_i) \geq \sum_k l(J_i\cap (a_k+\frac{\epsilon}{2N},b_k-\frac{\epsilon}{2N}))$. Hence, switching the order of the summation we get what we want.
+
+    \item[12]
+    It is obvious that this set is closed. $(a,b) \subseteq \mathbb{R} \setminus \bigcup (r_k-\frac{1}{2^k},r_k+\frac{1}{2^k})$ is not possible since $(a,b)$ contains a rational. Countable subadditivity tells us $|F|=\infty$
+
+    \item [13]
+    Let $q_1,q_2,..$ be the rationals in $[0,1]$. Let $G= \bigcup_{k=1}^\infty(q_k-\frac{\epsilon}{2^{k+1}},q_k + \frac{\epsilon}{2^{k+1}})$. $|G| \leq \epsilon$. Then $[0,1] \setminus G$ is the required set
+
+    \item[14]
+    It is not a straight line
+    
+\end{itemize}
+\subsection*{2B}
+\begin{itemize}
+    \item [1] This is obvious
+    \item [2] Simple verification
+    \item [3] We show that $\mathcal{S}$ contains $(a,b)$. Let $a_1,a_2,..$ be rationals strictly decreasing to $a$ and $b_1,b_2,..$ be rationals strictly increasing to $b$. Then $\bigcup(a_i,b_i]$=$(a,b)$
+    \item [4] We need to show $\mathcal{S}$ contains $(a,\infty)$. Let $a_1,a_2,..$ be rationals strictly decreasing to $a$. Let $n > a_1$ Then $\bigcup (a_i,n+i]=(a,\infty)$
+    \item [5] $\mathcal{S}$ clearly contains $(r,\infty)$ for $r \in \mathbb{Q}$. Now taking strictly decreasing rationals gets $(a,\infty)$
+    \item [6] Strictly decreasing rationals again
+    \item [7] $x \to x+ t$ is measurable
+    \item [8] $x \to tx$ is measurable
+    \item [9] Consider the $\sigma$ algebra on $\mathbb{R}$ given by $\{\phi,(-\infty,0),[0,\infty),\mathbb{R}\}$. Consider the function $f:\mathbb{R}\to\mathbb{R}$ which is 1 on $[-1,1]$ and -1 elsewhere. This function is not measurable, but $|f|$ is.
+    \item [10] Let $A_k=\{0.x_1x_2x_3... |\text{ } x_k =5\}$. This is a Borel set. Then for $k_1 < k_2 ...<k_n$, $A_{k_1}\cap A_{k_2}... \cap A_{k_n}$ is a Borel set. But this set is $\{0.x_1x_2...|x_{k_i}=5\}$. Hence $\{0.x_1x_2...|x_i=5 \text{ for at least n indices}\}$ is a Borel set. Now take the intersection for all $n$
+    \item[11] This is trivial
+    \item[12] This is also trivial
+    \item[13] If $E_i \in \mathcal{S}$ then $\chi_{E_i}$ are measurable and hence any linear combination also.
+
+    Suppose $\sum c_i\chi_{E_i}$ is measurable. This function is $c_i$ on $E_i$ and zero elsewhere. Hence $E_i \in \mathcal{S}$
+    \item[14] This is trivial
+    \item[15] It is easy to see that this is a $\sigma$ algebra. Suppose $f:X \to \mathbb{R}$ is not constant on $E_k$, with $f(x) < f(y)$. Then $f^{-1}(f(x),\infty) \notin \mathcal{S}$
+    \item[16] It is easy to see that this is a $\sigma$ algebra. Let $f:X\to\mathbb{R}$. $f$ is measurable with respect to $\mathcal{S}_A$ iff $f^{-1}(a,\infty) \in \mathcal{S}_A$ which happens iff $f$ is $\mathcal{S}$-measurable and $f(A)\subseteq(a,\infty)$ or $f(A)\subseteq(-\infty,a]$ for all $a$. This gives us what we want.
+    \item[17] We show that $f^{-1}(a,\infty)$ is Borel.
+
+    Suppose $f(x) > a$ and $f$ is continuous at $x$. Then $f(x)>a$ for all $x \in (x-\delta_x,x+\delta_x)\cap X$.
+
+    $f^{-1}(a,\infty)=f^{-1}(a,\infty)\cap\{x : f \text{ is discontinuous at }x\}\cup f^{-1}(a,\infty)\cap\{x : f \text{ is continuous at }x\}$
+    
+    $=f^{-1}(a,\infty)\cap\{x : f \text{ is discontinuous at }x\}\cup \bigcup (x-\delta_x,x+\delta_x)\cap X$ which is Borel
+
+    \item[18]
+    Define $f_n(x)=n(f(x+\frac{1}{n})-f(x))$ and use 2.48
+    \item[19] 
+    \begin{claim}
+    The measurable functions are those that are constant on a co-countable set
+    \end{claim}
+
+    \begin{proof}
+    It is clear that any such function is measurable.
+
+    Suppose $f$ is measurable. Then $f^{-1}(a,\infty)$ is countable for $a \in A$ and $f^{-1}(-\infty,a]$ is countable for $a \in B$. Let $c = \text{inf } A$. Since $f^{-1}(c+\frac{1}{n},\infty)$ is countable, $c \in A$
+    \end{proof}
+
+    \item [20]
+    Use log
+    \item [21]
+    Let $\mathcal{T}=\{A \subseteq [-\infty,\infty]:f^{-1}A \in \mathcal{S}\}$. It is easy to see that $\mathcal{T}$ is a $\sigma$ algebra. Now we have that $\mathcal{T}_\mathbb{R}$ contains every Borel set. We also have $\bigcap f^{-1}(n,\infty]=f^{-1}{\infty} \in \mathcal{S}$
+
+    \item[22]
+    Suppose $f$ is not continuous at $x \in B$. Then it is not continuous from the right or from the left.
+
+    If it is not continuous from the left, then for all $\delta > 0,(x-\delta,x)\cap B \neq \phi$. Define the interval $I_x = (\text{sup}_{y<x}\{f(y)\},f(x))$
+
+  If it is not continuous from the right, then for all $\delta > 0,(x+\delta,x)\cap B \neq \phi$. Define the interval $I_x = (f(x),\text{sup}_{y>x}\{f(y)\})$
+
+  It is not hard to see that the intervals $I_x$ are disjoint. Hence there must be only countably many.
+
+  \item[23]
+  Let $f(x) \in f(\mathbb{R})$. Let $\epsilon > 0$. Define $\delta = f(x+\epsilon)-f(x)$. Suppose $f(z) \in (f(x),f(x)+\delta)$. Then $x<z<x+\epsilon$. This proves continuity from the right. Continuity from the left is analogous.
+
+  \item[24]
+  Use 23
+
+  \item[25]
+  Define $f_n(x)=f(x)+\frac{x}{n}$.
+
+  \item [26]
+  Define $g(x)=\begin{cases}
+      \text{inf } f \quad \text{if} \quad x < b \text{ for all b} \\
+      \text{sup }_{y \leq x} f(y) \quad \text{otherwise}
+  \end{cases}$
+
+  \item [27]
+  Let $X$ be a set with at least 2 elements. Consider the $\sigma$ algebra consisting of only $X$ and $\phi$, and let $x \in X$. Consider the function $f:X \to[-\infty,\infty]$ that sends $x$ to $\infty$ and other elements to $-\infty$.
+
+  \item [28]
+  This is trivial
+
+  \item [29]
+  Define $g(x)=\frac{1}{2}+\frac{arctan(x)}{\pi}$.
+  
+  Now define $f_t(x)=\begin{cases}
+      g(x)\chi_{\mathbb{Q}}(x) \text{ if }t<0 \\
+      g(x-t)\chi_{\mathbb{Q}}(x-t) \text{ otherwise}
+  \end{cases}$
+
+  Now, consider the measurable space $\mathbb{R}$ with the countable-co-countable $\sigma$ algebra
+
+  \item[30]
+  This is trivial
+
+\end{itemize}
+
+\subsection*{2C}
+\begin{itemize}
+    \item [1] $\mu(X)$ is the greatest element.
+    \item [2] trivial
+    \item [3] Define $w_i=\frac{1}{2^i}$ and $\mu(E)=\sum_{i \in E} w_i$
+    \item [4] $(\mathbb{Z},2^\mathbb{Z},\mu)$ where $\mu(E)=\sum_{i \in E} w_i$ and $w_i$ is $\frac{1}{2^i}$ for $i \geq 1$ and $3$ otherwise
+    \item [5] Consider $\{ A \ | \ \mu(A) > \frac{1}{n}\}$ which must be finite
+    \item [6] \begin{claim}
+        The only such $c$ is $c=4$
+    \end{claim}
+    \begin{proof}
+        Consider the measure space $(\mathbb{Z}_{\geq0},2^{\mathbb{Z}_{\geq0}},\mu)$ where $\mu(E)=\sum_{i \in E} w_i$ and $w_i$ is $\frac{1}{2^i}$ for $i \geq 1$ and $w_0=3$
+
+        Suppose $(X,\mathcal{S},\mu)$ is such a measure space. 
+        $\mu(E_1)=1$,so $\mu(X\setminus E_1)=c-1\geq3$
+
+        Suppose $c > 4+\epsilon$. Then $3<c-1-\epsilon<c$, so $\mu(E_2)=c-1-\epsilon$. Then $\mu(X\setminus E_2)=1+\epsilon$
+        
+    \end{proof}
+    \item [7] Consider the sequence $\frac{1}{2},3,\frac{1}{4},4,\frac{1}{8},5...$. The corresponding measure space is as required.
+
+    \item[8] Consider the measurable space $(\mathbb{R},\mathcal{S})$ where $\mathcal{S}$ is all unions of $(-\infty,0],(0,\frac{1}{2}],(\frac{1}{2},1),[1,\frac{3}{2}),[\frac{3}{2},\infty)$. Define the measures $\mu$ and $\nu$ by their values on these sets, respectively $1,1,1,1,1$ and $1,2,0,2,1$. Now define $\mathcal{A}=\{(0,1),(\frac{1}{2},\frac{3}{2})\}$
+
+    \item[9] trivial
+    \item[10] Consider the measure space from 2B.1 and $E_i=[i,\infty)$
+    \item [11] trivial
+    
+\end{itemize}
+\subsection*{2D}
+\begin{itemize}
+    \item [1]
+    Define $A_n=\{0.x_1x_2... \ : \text{ there are 100 consecutive 4s in first n digits}\}$
+
+    Define $f(n)$ to be the number of $n$ length decimal strings with 100 consecutive 4s. We have $f(n)=10f(n-1)+10^{n-100}-10^{n-101}-9f(n-101)$
+
+    Now $A_n=\bigcup_s\{0.sx_{101}x_{102}...\}$ where $s$ ranges over all $n$ length strings with 100 consecutive 4s. Each term in this union is a closed interval of length $10^{-n}$. So $\mu(A_n)=f(n) 10^{-n}$
+
+    We want $\mu(\bigcup A_n)=\text{lim }\mu(A_n)$ since $A_n$ are ascending.
+
+    Hence the answer is 1
+
+    \item [2] Let $B$ be a bounded non Lebesgue measurable set. There is $\epsilon>0$ such that $|B\setminus F| \geq \epsilon$ for all closed $F \subseteq B$. Let $A=\frac{1}{\epsilon}B$. Let $F \subseteq A$ be closed. Suppose $|A|-|F|<1$. Then $|B|-|\epsilon F|<\epsilon$, so $|B \setminus \epsilon F| < \epsilon$ which is a contradiction
+
+    \item [5] Use 2.71c and take the union of the first $n$ sets as $F_n$
+
+    \item [6] Suppose $A$ is Lebesgue measurable. Let $\epsilon > 0$. Then there is an open set $A \subseteq G_0$ with $|G_0 \setminus A| < \frac{\epsilon}{2}$. We know that $G_0 = I_1 \cup I_2 \cup I_3..$ where these are disjoint bounded open intervals. From 2A.11, $|G_0|=\sum l(I_i)$, so there is $N$ such that $\sum_{i=1}^N l(I_i)>|G_0|-\frac{\epsilon}{2}$. Let $G = \bigcup_{i=1}^NI_i$. Now $|A \setminus G|+|G \setminus A| \leq |G_0 \setminus G| + |G_0 \setminus A| < \epsilon$
+
+    Suppose the condition holds. Let $\epsilon > 0$. Get $G_0$ such that $|A \setminus G_0|+|G_0 \setminus A| + \delta = \epsilon$. Get $I_1,I_2,..$ such that $I_i$ cover $A \setminus G_0$ and $\sum l(I_i)<|A \setminus G_0| + \delta$. Now let $G = G_0 \cup \{I_i\}$. We have $|G \setminus A| \leq |G_0 \setminus A|+\sum l(I_i)<\epsilon$
+
+
+    
+    \item [7] Use 2.71f and take the intersection of the first $n$ sets as $G_n$
+
+    \item [8] $A=B \cup (A \setminus B)$. So $t+A=(t+B) \cup(t + A \setminus B)$. $t + B$ is Borel, and outer measure is translation invariant.
+
+    \item[9] $A=B \cup (A \setminus B)$. So $tA=tB \cup t(A \setminus B)$. $tB$ is Borel and $t(A \setminus B)$ has outer measure 0.
+
+    \item[10] $B = C \cup (B \setminus C) $, so $A \cup B=A \cup C \cup (B \setminus C) $. Hence $|A \cup B|=|A \cup C|=|A|+|C|=|A|+|B|$ 
+
+    \item [14] $\frac{1}{4}=(0.\overline{02})_3$ and $\frac{9}{13}=(0.\overline{200})_3$
+
+    \item [15] $13/17=\frac{501\frac{16}{17}}{3^6}=(0.200120...)_3$
+
+    \item [16] $G_4=(\frac{1}{81},\frac{2}{81})\cup(\frac{7}{81},\frac{8}{81})\cup(\frac{19}{81},\frac{20}{81})\cup(\frac{25}{81},\frac{26}{81})\cup(\frac{55}{81},\frac{56}{81})\cup(\frac{61}{81},\frac{62}{81})\cup(\frac{73}{81},\frac{74}{81})\cup(\frac{79}{81},\frac{80}{81})$
+
+    \item [17] Every $(0.x_1x_2..)_3$ is the sum of the expansion with 2 converted into 1 and the expansion with 2 converted into 1 and 1 converted into 0.
+
+    \item [20] $\Lambda(\frac{9}{13})=(0.\overline{100})_2$ , and $93/100=(0.221002..)_3$, so $\Lambda(93/100)=(0.111)_2$
+
+    \item[21] $\frac{1}{3}=(0.\overline{01})_2$, so $\Lambda^{-1}(\{\frac{1}{3}\})=(0.\overline{02})_3$
+
+    $\frac{5}{16}=(0.0101)_2=(0.0100\overline{1})_2$, so $\Lambda^{-1}(\{\frac{5}{16}\})=[\frac{19}{81},\frac{20}{81}]$
+
+\end{itemize}
+
+\subsection*{2E}
+
+\begin{itemize}
+    \item [1] Let $X= \{x_1,...x_n\}$. Let $\epsilon > 0$. There is $N_i$ such that $|f_k(x_i)-f(x_i)|<\epsilon$ for $k \geq N_i$. Then $|f_k(x)-f(x)|<\epsilon$ for $k \geq max \ N_i$
+    \item [2] Define $f_n(m)=\frac{m}{n}$
+    \item [3] Define $f_n(x)=\begin{cases}
+        \frac{1}{x} \text{ if } x \geq\frac{1}{n} \\
+        n^2x \text{ otherwise }
+    \end{cases}$
+    \item [4] Let $\epsilon > 0$. There is $N$ such that $|f_k(x)-f(x)|< \frac{\epsilon}{3}$ for $k \geq N$. Get $\delta > 0$ such that $|f_N(x)-f_N(y)|<\frac{\epsilon}{3}$ if $|x-y|<\delta$. Suppose $|x-y|<\delta$. Then $|f(x)-f(y)| \leq |f(x) -f_N(x)|+|f_N(x)-f_N(y)|+|f(y)-f_N(y)|<\epsilon$
+
+    \item[6] Let $\epsilon > 0$. Define $A_{m,n}=\bigcap_{k=m}^\infty \{x:f_k(x)>n\}\in \mathcal{S}$. Now $A_{1,n}\subseteq A_{2,n}..$ and $\bigcup_m A_{m,n}=X$, so lim $\mu(A_{m,n})=\mu(X)$. So there is $m_n$ such that $\mu(X)-\mu(A_{m_n,n})<\frac{\epsilon}{2^n}$. Let $E =\bigcap_nA_{m_n,n}$. Then, as in the text, $\mu(X \setminus E)<\epsilon$. 
+
+    Now we must verify uniform convergence. Let $n>0$. Since $E \subseteq A_{m_n,n},f_k(x)>n$ for all $k\geq m_n$ and $x \in E$
+
+    \item [7]\begin{claim}[Dini]
+        Let $X$ be compact and let $g_1,g_2..$ be an increasing sequence of continuous functions on $X$ that converges pointwise to $g$, which is continuous. Then the convergence is uniform.
+    \end{claim}
+
+    \begin{proof}
+        Let $\epsilon > 0$. Define $U_n=\{x:g(x)-g_n(x)<\epsilon\}$. Then these sets form an open cover, and they are also ascending. Since $X$ is compact, $U_N=X$
+    \end{proof}
+
+    \item[8] It suffices to prove, by Problem 1, that there is a finite set $E$ with $\mu(\mathbb{Z}_{>0}\setminus E)<\epsilon$, but this is just the tail sum.
+
+    \item[9] Use Theorem 18.3 of Munkres
+
+    \item[10] Suppose $F$ is not closed. Then there is $x_0 \notin F$ which is a limit point of $F$. Define the function $f:F \to \mathbb{R}$ by $f(x)=\frac{1}{x-x_0}$. 
+
+    \item[11] Suppose $F$ is not closed. Then there is $x_0 \notin F$ which is a limit point of $F$. Define the functions $f_n:F \to \mathbb{R}$ by $f_n(x)=sin\frac{1}{n(x-x_0)}$ %not done
+
+    
+\end{itemize}
+
+\section*{Chapter 3}
+\subsection*{3A}
+\begin{itemize}
+    \item [1] Let $P$ be the partition $X\setminus E,E$. Then $\infty>\mathcal{L}(f,P)\geq \infty \text{ inf}_Ef$, so the required result follows.
+    \item[2] We have $\mathcal{L}(f,P)=\text{inf}_Af \leq f(c)$ where $A \in P$ is the set containing $c$. Define $A_n=f^{-1}(f(c)-\frac{1}{n},f(c)] \in \mathcal{S}$. Now $\int fd\delta_c\geq \text{inf}_{A_n}f\geq f(c)-\frac{1}{n}$
+
+    \item[3] The integral is positive if and only if $\mathcal{L}(f,P)>0$ for some partition.
+
+    $\mu(f^{-1}(0,\infty))>0$ if and only if $\mu(f^{-1}(\frac{1}{n},\infty))>0$ for some $n$
+
+    \item[4] Consider the function $f:[0,1]\to(0,1]$ \\ given by $f(x)=\begin{cases}
+        \frac{1}{n}, \text{ where }n \text{ is smallest such that } x=\frac{m}{n} \text{ for some }m, \text{ if } x \in \mathbb{Q} \\
+        1 \text{ otherwise}
+    \end{cases}$ 
+
+    Then $L(f,P,[0,1])=0$. This function is Borel measurable.
+
+    \item[5] Let $P$ be a partition of $\mathbb{Z}_{>0}$. Then $\mathcal{L}(b,P)=\sum|A_j|\text{ inf}_{A_j}b= \sum_{j:A_j \text{ is finite}}|A_j|\text{ inf}_{A_j}b\leq \sum b_i$
+
+    Also, $\sum_{i=1}^nb_i\leq\mathcal{L}(b,P)$ where $P$ is the partition $\{1\},...\{n\},\{n+1,...\}$
+
+    \item[6] We have $\mathcal{L}(f,P)=\sum\mu(A_j)\text{inf}_{A_j}f=\sum\sum\mu(B_{i,j})\text{inf}_{A_j}\leq\mathcal{L}(f,P')$
+
+    \item[7] We have $\mathcal{L}(f,P)=\sum_{j=1}^m\mu(A_j) \text{inf}_{A_j}f=\sum_{j=1}^m \text{inf}_{A_j}f \sum_{x \in A_j}w(x)\leq \sum_{j=1}^m \sum_{x \in A_j} w(x)f(x)$
+
+    We now need to prove $-\epsilon +\sum_{j=1}^m \sum_{x \in A_j} w(x)f(x)<\sum_{x \in X_0} w(x)f(x)$ for some finite set $X_0$. But this is true.
+
+    Also $\sum_{i=1}^nw(x_i)f(x_i)\leq\mathcal{L}(f,P)$ where $P$ is the partition $\{x_1\},\{x_2\},..,\{x_n\},X\setminus\{x_1,..x_n\}$
+
+    \item[8] Let $f_k=\chi_{[k,k+1]}$
+
+    \item [9]
+    Let $E_1,E_2,.. \in \mathcal{S}$ be disjoint. Then $\nu(\bigcup E_i)=\int \chi_{\bigcup E_i}fd\mu=\int (\sum \chi_{E_i}f)d\mu$. By the monotone convergence theorem, this is $lim\int (\sum_{i=1}^n \chi_{E_i}f)d\mu=lim \sum_{i=1}^n \int \chi_{E_i}fd\mu=\sum v(E_i)$
+
+    \item [10] Follows directly from the monotone convergence theorem
+
+    \item[11] Let $g=\sum_{k=1}^\infty|f_k|$. By Problem 10, $\int gd\mu<\infty$. So $\mu(g^{-1}\infty)=0$. Define $E=g^{-1}[0,\infty)$.
+
+    \item[15]a) First, suppose $f$ is nonnegative. Now $\{\mathcal{L}(f,P)\}=\{\mathcal{L}(f^+,P)\}$, so $\int f_td\lambda=\int fd\lambda$
+
+    Now let $f$ be general. $\int f_td\lambda=\int f_t^+d\lambda-\int f_t^-d\lambda=\int fd\lambda$
+
+    b) First, suppose $f$ is nonnegative. Now $\mathcal{L}(f_t,P)=\frac{1}{|t|}\mathcal{L}(f,P_t)$, so \\$\int f_t d\lambda=\frac{1}{|t|}\int fd\lambda$
+
+    Now let $f$ be general. $\int f_td\lambda=\int f_t^+d\lambda-\int f_t^-d\lambda=\frac{1}{|t|}\int f d\lambda$
+
+    \item [16] Since any $\mathcal{S}$-partition is also a $\mathcal{T}$-partition, LHS $\leq$ RHS. 
+    
+    Now, let $P=E_1,E_2,..E_n$ be a $\mathcal{T}$-partition, with $\mu_2(E_i)>0$ for $i=1,..,t$ 
+    
+    
+    Let $c_1<c_2<..<c_k$ be the distinct values of $\text{inf}_{E_i}f=c_{m_i}$ for $i=1..t$. Now $f^{-1}[c_1,c_2),...f^{-1}[c_{k-1},c_k),f^{-1}[c_k,\infty]\in \mathcal{S}$ are disjoint. 
+    
+    We can get an $\mathcal{S}$-partition $P'=S_1,S_2,..S_k,S_{k+1}$ by adding another set (note that this set will have measure 0). 
+    
+    Now $\mathcal{L}(f,P)=\sum_{i=1}^t \mu_2(E_i)\text{inf}_{E_i}f=\sum_{i=1}^t c_{m_i}\sum_{j=m_i}^k\mu_2(S_j\cap E_i)$
+
+    We also have $\mathcal{L}(f,P')=\sum_{j=1}^k\mu_2(S_j)\text{inf}_{S_j}f=\sum_{i=1}^t\sum_{j=m_i}^k  \mu_2(S_j\cap E_i)\text{inf}_{S_j}f$
+
+    \item[19]$\text{inf }f\leq f\leq \text{sup } f$, so we can use 3.8 to get the required result.
+    
+
+    
+\end{itemize}
+
+\subsection*{3B}
+\begin{itemize}
+    \item [1] Let $f_k=e_k$
+    \item[2] Define $f_k(x)=\begin{cases}
+        0 \text{ if } x<k \\
+        x-k \text{ if } x \in [k,k+1]\\
+        1 \text{ otherwise}
+    \end{cases}$
+    
+    \item [3] Let $\epsilon > 0$. By 3.28, there is $\delta > 0$ such that $\int_B |f|d\lambda<\epsilon $ for every Borel set with $\lambda(B)<\delta$. Let $y<x$. 
+    Then \[g(x)-g(y)=\int \chi_{(-\infty,x)}fd\lambda - \int \chi_{(-\infty,y)}fd\lambda=\int \chi_{[y,x)}f d\lambda=\int_{[y,x)}f d\lambda\]
+
+    Hence $|g(x)-g(y)|\leq \int_{[y,x)}|f|d\lambda$
+
+    \item[5] Let $\epsilon>0$. By 3.29 there is a Borel set $E$ with $|E|<\infty$ and $\int_{\mathbb{R}\setminus E}|f|d\lambda<\frac{\epsilon}{3}$. 
+    
+    By 3.28 there is $\delta > 0$ such that $\int_{B} |f|d\lambda< \frac{\epsilon}{3}$ for every Borel set $B$ with $|B|<\delta$
+    
+    Now $E \cap [-k,k]$ is an increasing sequence of sets with union $E$. Thus by 2.59 there is $N$ such that for $k \geq N, |E\cap[-k,k]|>|E|-\delta$
+
+    Now $|\int fd\lambda-\int_{[-k,k]}f d\lambda|=|\int_E fd\lambda+\int_{\mathbb{R}\setminus E}f d\lambda-\int_{[-k,k]}f d\lambda|$
+
+    We have $|\int (\chi_E-\chi_{[-k,k]})fd\lambda|\leq \int \chi_{E\setminus[-k,k]}|f|d\lambda+\int\chi_{[-k,k]\setminus E}|f|d\lambda<\frac{2\epsilon}{3}$ for $k \geq N$. Now use the triangle inequality.
+
+    \item[9] Use 2B.13 and 3.15
+
+    \item[11] The given set is $|f|^{-1}(0,\infty)=\bigcup_{n=1}^\infty|f|^{-1}(\frac{1}{n},\infty)$. Call this set $A_n$
+    
+    Now, $\int|f|d\mu\geq \mathcal{L}(\{A_n,X \setminus A_n\},|f|)\geq \frac{\mu(A_n)}{n}$
+
+    
+\end{itemize}
+
+\section*{Chapter 4}
+\subsection*{4A}
+\begin{itemize}
+    \item [1] We may assume $|h|^p \in \mathcal{L}^1(\mu)$. By Markov's inequality, we have $\mu(\{x \in X: |h(x)|^p\geq c^p\})\leq \frac{1}{c^p}\int|h|^p$. We get what we want since $x \to x^p$ is an increasing function
+    \item [2] Let $a=\int hd\mu$. Then by Problem 1, LHS $\leq \frac{1}{c^2}\int(h-a)^2d\mu$ 
+    
+    Now, $\int (h^2+a^2-2ah)d\mu=\int h^2d\mu-a^2$, since $\mu(X)=1$ 
+
+    \item [3] Suppose $c$ satisfies the condition. Let $E_c=\{x:|h(x)|\geq c\}\}$. Then $\int |h|-c\chi_{E_c}=0$. This means, by 3A.3 that $\mu\{x:|h(x)|>c\chi_{E_c}(x)\}=0$. Let $E=\{x:|h(x)|=c\}$. Then $\mu(X \setminus E)=0$. So there cannot be more than one such $c$
+
+    \item[4] Let $\delta>0$. We show that $3-\delta$ does not work. Consider the intervals $(0,1)$ and $(1-\epsilon,2)$. Now $(3-\delta)*(0,1)=(-1+\frac{\delta}{2},2-\frac{\delta}{2})$ and $(3-\delta)*(1-\epsilon,2)=(\frac{\delta}{2}-\epsilon(2-\frac{\delta}{2}),3+\epsilon-\frac{\delta(1+\epsilon)}{2})$
+
+    \item [5]\begin{claim}
+        Suppose $I_1$ and $I_2$ are nonempty bounded open intervals that are not disjoint and $|I_1|\geq |I_2|$. Then $I_2 \subseteq 3*I_1$
+    \end{claim}
+
+    \begin{proof}
+        Without loss of generality, assume $I_1=(-\frac{L}{2},\frac{L}{2})$ and $I_2=(a,b)$ with $a>-\frac{L}{2}$. Then $b \leq L +a$. Now $3*I_1=(-\frac{3L}{2},\frac{3L}{2})$. Since $a<\frac{L}{2}$, we have what we want.
+    \end{proof}
+
+    \item[6] 
+    Suppose $b \in (0,1)$. Then for small $t$ the value of the inner expression is $1$, and this is the supremum.
+
+    Suppose $b \geq 1$. Then the inner expression is $\frac{1}{2t}\int_{b-t}^b\chi_{[0,1]}$. We consider only $t$ such that $0\leq b-t< 1$. Then the expression simplifies to $\frac{1-b+t}{2t}=\frac{1}{2}-\frac{b-1}{2t}$. This is maximized by selecting $t=b$.
+
+    Suppose $b\leq0$. Then the inner expression is $\frac{1}{2t}\int_b^{b+t}\chi_{[0,1]}$. We consider only $t$ such that $0<b+t\leq 1$. Then the expression simplifies to $\frac{1}{2}-\frac{-b}{2t}$. This is maximized by selecting $t=1-b$
+
+    \item[7] Clearly on $(0,1)\cup (2,3)$ the value of the function is $1$.
+
+    Suppose $b\leq0$. Then the inner expression is $\frac{1}{2t}\int_b^{b+t}\chi_{[0,1]\cup [2,3]}$. We consider $t$ such that $0<b+t\leq1$ or $2<b+t\leq 3$. In the first case the expression simplifies to $\frac{1}{2}-\frac{-b}{2t}$. This is maximized by selecting $t=1-b$, and we get $\frac{1}{2(1-b)}$. In the second case the expression simplifies to $\frac{1}{2}-\frac{1-b}{2t}$, which is maximized by selecting $t=3-b$, for which we get $\frac{1}{3-b}$.
+
+    Suppose $b \in [1,\frac{3}{2}]$. For the inner expression, we consider only $t$ such that $b-t <1$. Then the inner expression is $\frac{1}{2t}(1-b+t+\int_b^{b+t}\chi_{[2,3]})$. 
+    
+    Now if $2<b+t\leq 3$ this is $1-\frac{1}{2t}$, so we choose $t=3-b$ to get $1-\frac{1}{2(3-b)}\geq\frac{1}{2}$ 
+
+    Otherwise, we have $\frac{1}{2}-\frac{b-1}{2t}\leq \frac{1}{2}$, so we reject this.
+
+    The other cases follow by symmetry.
+
+    We have $(\chi_{[0,1]\cup[2,3]})^*(b)=\begin{cases}
+        \frac{1}{3-b} \quad \quad \quad  b<-1 \\
+        \frac{1}{2(1-b)} \quad \quad b\in[-1,0] \\
+        1  \quad \quad \quad \quad b \in(0,1) \\
+        1-\frac{1}{2(3-b)} \ b \in[1,\frac{3}{2}]\\
+        1-\frac{1}{2b} \quad \ \ \ b \in (\frac{3}{2},2] \\
+        1 \quad \quad \quad \quad b\in (2,3) \\
+        \frac{1}{2(b-2)}\quad \quad b \in [3,4] \\
+        \frac{1}{b} \quad \quad \quad \quad   b>4
+    \end{cases}$
+
+    \item[8] Suppose $b\leq0$. Then the inner expression is $\frac{1}{2t}\int_0^{b+t}h$ and we consider only $t$ such that $0<b+t\leq1$. But this is $\frac{(b+t)^2}{4t}$. So we get $\frac{1}{4(1-b)}$
+
+    Suppose $b \geq 1$. Then the inner expression is $\frac{1}{2t}\int_{b-t}^1h$ and we consider only $t$ such that $0\leq b-t<1$. But this is $\frac{1}{4t}(1-(b-t)^2)$. So we get $\frac{b-\sqrt{b^2-1}}{2}$
+
+    Suppose $b \in (0,\frac{1}{2}]$. We consider only $t$ such that $b+t \leq 1$. If $b-t \geq 0$ the inner expression is $b$. If $b-t<0$ the inner expression is $\frac{b}{2}+\frac{t}{4}+\frac{b^2}{4t}$. So we get $\frac{1}{4(1-b)}$
+
+    Suppose $b\in(\frac{1}{2},1)$. We consider only $t$ such that $0\leq b-t$. If $b+t \leq1$ the inner expression is $b$. If $b+t>1$ the inner expression is $\frac{b}{2}-\frac{t}{4}+\frac{1-b^2}{4t}$. So we get $b$.
+
+\end{itemize}
+
+\section*{Chapter 5}
+\subsection*{5A}
+\begin{itemize}
+    \item [1] Let $\pi_1,\pi_2$ be the projection functions. Note that $\{C \subseteq X \times Y:\pi_1(C)\in \mathcal{S}\}$ is a $\sigma$-algebra on $X \times Y$ and it contains $\mathcal{S}\otimes\mathcal{T}$. This proves $A \in \mathcal{S}$. Similarly, $B \in \mathcal{T}$
+    
+    \item[2] Note that $\{C \subseteq X \times X:\pi_1(C \cap Diag)\in \mathcal{S}\}$ is a $\sigma$-algebra containing $\mathcal{S} \otimes \mathcal{S}$
+
+    \item [3] Let $W$ be a non-Borel set. Define $E=\{(w,w):w \in W\}$ and use Problem 2
+
+    \item [4] The function $(x,y)\to xy$ is the product of the projection functions and is hence measurable. Now $h=Prod \ \circ (f,g)$. So $h^{-1}(a,\infty)=(f,g)^{-1}(Prod^{-1}(a,\infty))$. 
+
+    Let $A,B$ be Borel sets. Now $(f,g)^{-1}(A\times B)=f^{-1}(A)\times g^{-1}(B)\in \mathcal{S}\otimes\mathcal{T}$
+
+    \item[5] The union of two non-disjoint intervals is an interval. So we may assume all intervals are pairwise disjoint. We have finite intervals $I_1,I_2,..,I_n$ with endpoints $a_1\leq b_1\leq a_2 \leq b_2...a_n\leq b_n$. In addition we have at most two infinite intervals.
+
+    \item [6] Let $q_1,q_2,..$ be the rationals. Consider the set $\bigcup(q_i-\frac{1}{2^i},q_i+\frac{1}{2^i})$. This set has finite Lebesgue measure. Suppose its complement was a countable union of intervals. Then its complement is countable and has Lebesgue measure zero, which is a contradiction.
+
+    \item[7] trivial
+
+    \item[8] Suppose a) holds. Then we have $Y_k$ with $X=\bigcup Y_k$ and $\mu(Y_k)<\infty$. Set $X_k=\bigcup_{i=1}^k Y_i$ 
+
+    Suppose b) holds. Then $X_1,X_2 \setminus X_1,X_3\setminus X_2,..$ make c) hold
+
+    c) implies a) by definition
+
+    \item[9] 
+
+\end{itemize}
+
+\subsection*{5B}
+
+\begin{itemize}
+    \item 
+\end{itemize}
+
+\section*{Chapter 6}
+\subsection*{6A}
+\begin{itemize}
+    \item[2] See Rudin 2.20
+    \item[3] Metric is continuous
+    \item[4] Open sets form a topology
+    \item[5] Use de Morgan and Problem 4
+    \item[6] a) follows by the definition of closure. For b) take any discrete metric space with more than one element. 
+    \item[7] Metrizable topologies are Hausdorff 
+    \item[9] Let $U$ be open. Let $F_n=\{x:d(x,U^c)\geq\frac{1}{n}\}$.
+    \item[10] The statement is true, since RHS is the smallest closed set containing $U$ and $W$. Any such set must contain $\overline{U}$ and $\overline{W}$. But $\overline{U}\cup\overline{W}$ is closed.
+    \item[14] Let $x_1,x_2,..$ be the sequence. We have that $x_{n_1},x_{n_2},... \to x$. Let $\epsilon>0$. There is $N$ such that $d(x_{n_k},x)<\frac{\epsilon}{2}$ for $k \geq N$. There is $M$ such that $d(x_n,x_m)<\frac{\epsilon}{2}$ if $n,m\geq M$. Choose $K\geq N$  so that $n_K\geq M$. Now let $n\geq n_K$. We have $d(x_n,x)\leq d(x_n,x_{n_K})+d(x_{n_K},x)<\epsilon$ 
+\end{itemize}
+\subsection*{6B}
+\begin{itemize}
+    \item [1] Multiply by complex conjugate
+    \item[2] Let $z=a+ib$ and square the inequality, we get $\text{max}\{a^2,b^2\}\leq a^2+b^2 \leq 2\text{max}\{a^2,b^2\}$
+    \item[3] As in Problem 2, we get $a^2+b^2+2|ab|\leq 2(a^2+b^2)\leq 2(a^2+b^2+2|ab|)$ 
+    \item[9] trivial
+    \item[10]trivial 
+\end{itemize}
+
+\subsection*{6C}
+
+\begin{itemize}
+    \item [1] The norm is 1-Lipschitz by the reverse triangle inequality.
+    \item[2] LHS $\subseteq$ RHS is 6A.6. Suppose $||f-g||=r$, and let $\epsilon>0$. Let $h=(1-\frac{\epsilon}{2r})(g-f)+f$. Then $h \in B(f,r)$ and $||h-g||=\frac{\epsilon}{2}$
+    
+    \item[3] We have $||(2,2,..)||=n\sqrt{2}\neq 2||(1,1,..)||=2n$
+
+    We have $||e_i||_{1/2}=1$, and $||e_1+e_2||_{1/2}=4$
+    
+    \item[4] Let $x_1,x_2,..$ be Cauchy. Then there is $N$ such that $d(x_n,x_N)<1$ for $n \geq N$
+    \item[5] We have $||v||_\infty\leq||v||_1$, so if a sequence is Cauchy with respect to norm 1 it is Cauchy with respect to norm infinity. We also have $||v||_1\leq n||v||_\infty$, so the converse also holds.
+
+    Suppose $v_1,v_2,..$ is Cauchy. Then $v_1^i,v_2^i,..$ is Cauchy and converges to $v^i$. Then $v_1,v_2..$ converges to $v$
+
+    \item[6] It is clear that this is a valid norm. Suppose $f_1,f_2,..$ is Cauchy. Then for each $x$, $f_1(x),f_2(x),..$ is Cauchy. So we get pointwise convergence to a function $f$. It is clear that $f$ is bounded. Now Theorem 7.8 of Rudin completes the proof
+
+    \item[7] Consider the Cauchy sequence $(0,0,..),(\frac{1}{2},\frac{1}{2},0,0,..),(\frac{2}{3},\frac{2}{3},\frac{2}{3},0,0,..)$. If it converged, it would converge to $(1,1,..)$ which is not in $\ell^1$
+
+    \item[8] Suppose $x_1,x_2,..$ is Cauchy. Then $x_1^i,x_2^i,..$ is Cauchy and converges to $x^i$. Now $\sum_{i=1}^n|x^i|=\text{lim}\sum_{i=1}^n|x_k^i|$. But $\sum_{i=1}^n|x_k^i|\leq ||x_k||_1\leq M$, by Problem 4. So $x \in \ell^1$. 
+
+    Let $\epsilon>0$. We have $\sum_{i=1}^n|x_k^i-x_m^i|\leq\epsilon$ if $k,m \geq N$. If we take the limit with $m$, we get $\sum_{i=1}^n|x_k^i-x^i|\leq \epsilon$ if $k\geq N$. So $||x_k-x||_1 \leq \epsilon$ for $k \geq N$
+
+    \item[9] Define, for $n\geq3,\quad f_n=\begin{cases}
+        0 \quad \quad \quad \ \ \ \text{for }x \leq\frac{1}{2} \\
+        n(x-\frac{1}{2}) \text{ for } x\in (\frac{1}{2},\frac{1}{2}+\frac{1}{n}] \\
+        1 \quad \quad \quad \ \ \ \text{for }x>\frac{1}{2}+\frac{1}{n}
+    \end{cases}$ 
+
+    We see that $f_n$ is a Cauchy sequence. Suppose it converges to $f$. This means $\int_0^1|f-f_n| \to 0$. Hence we have $\int_0^\frac{1}{2}|f|=0$ and since $f$ is continuous, $f$ is identically $0$ on $[0,\frac{1}{2}]$
+
+    Similarly, we have $\int_{\frac{1}{2}+\frac{1}{n}}^1|f-1| \to 0$, so $\int_\frac{1}{2}^1|f-1|=0$. This means $f$ is identically $1$ on $[\frac{1}{2},1]$, which is a contradiction since $f$ is continuous.
+
+
+    \item[10] We have $B(w,r)\subseteq U$. Let $v \in V$. We see that $\frac{r(v-w)}{2||v-w||}+w \in U$. So $v-w\in U$ and hence $v \in U$ 
+    
+    \item[11] A normed vector space is path connected, because we can take the line segment. 
+
+    \item[12] Let $f,g \in \overline{U}$. Then there are $f_1,f_2,.. \in U$ with $f_i\to f$ and $g_1,g_2,.. \in U$ with $g_i \to g$. Then $f_1+g_1,f_2+g_2,.. \in U$ and they converge to $f+g$. Similarly $cf \in \overline{U}$ 
+\end{itemize}
+
+\subsection*{6D}
+\begin{itemize}
+    \item [1] We have $\phi(v)=\alpha$. Then $\phi^{-1}(\alpha)=v+\text{null }\phi$. Now the required result follows from 6.52
+    \item[2] Suppose $\phi(u)\neq 0$. Let $v \in V$. Now $v-\frac{\phi(v)}{\phi(u)}u \in \text{null }\phi$
+    \item[3] One direction is obvious, and we may assume $\text{null} \phi =\text{null}\psi \neq V$. So we have $\psi(v)=\alpha \phi(v) \neq 0$. Then for any $w$, $v-\frac{\psi(v)}{\psi(w)}w \in \text{null }\psi$. Hence $\psi(w)=\alpha \phi(w)$
+    \item[4] We have $||T(c_1,c_2,..,c_n)||\leq \sum|c_i|||Te_i||\leq ||(c_1,c_2,..,c_n)||_\infty\sum ||Te_i||$
+\end{itemize}
+
+\subsection*{6E}
+\begin{itemize}
+    \item [1] Follows from Theorem 17.5 of Munkres
+    \item [2] We have $\text{int } U=\overline{U^c}^c$
+    \item[3]  No, take $(0,1]$ and $[1,2)$
+    \item[4] Trivially true 
+    \item[5] $X$ is a closed subspace of a complete metric space. Baire's theorem is not violated because $\{\frac{1}{k}\}$ is open in $X$.
+    \item[6] $\mathbb{Q}$
+\end{itemize}
+
+\section*{Chapter 7}
+\subsection*{7A}
+\begin{itemize}
+    \item [1] We have $||\alpha f||_\infty=\text{inf}\{t>0:\mu(\{x \in X:|f(x)|>\frac{t}{|\alpha|}\})=0\}=|\alpha|\text{inf}\{t>0:\mu(\{x \in X:|f(x)|>t\})=0\}=|\alpha|||f||_\infty$
+
+    Let $\epsilon>0$. Then there is $t_1<||f||_\infty+\frac{\epsilon}{2}$, $t_2<||g||_\infty+\frac{\epsilon}{2}$ with $\mu(\{x:|f(x)|>t_1\})=0$ and $\mu(\{x:|g(x)|>t_2\})=0$
+
+    Now $\{x:|f(x)+g(x)|>t_1+t_2\}\subseteq \{x:|f(x)|+|g(x)|>t_1+t_2\}\subseteq \{x:|f(x)|>t_1\}\cup\{x:|g(x)|>t_2\}$. So $||f+g||_\infty \leq t_1+t_2<||f||_\infty+||g||_\infty +\epsilon$
+
+    \item[2] As shown in the text, equality holds precisely when $a=b^{\frac{1}{p-1}}$, which is $a^p=b^{p'}$ 
+
+    \item[3] Let the measure space be $\{1,..,n\}$ and $f(i)=a_i,h(i)=\frac{1}{n^{4/5}}$, with $p=5$. Then applying Holder's inequality gives the required result.
+
+    \item[4] We have $\mu\{x:|h(x)|>||h||_\infty\}=0$. So $|f|(||h||_\infty-|h|)\geq 0$ almost everywhere. If we integrate, we obtain the required result.
+
+    \item[5] Clearly, we may assume $||f||_p,||h||_{p'}\neq0$. We have $||\tilde{f}\tilde{h}||_1=\int \frac{|\tilde{f}|^p}{p}+\frac{|\tilde{h}|^{p'}}{p'}$ where $\tilde{f}=\frac{f}{||f||_p}$ and $\tilde{h}=\frac{h}{||h||_{p'}}$
+
+    This is equivalent to $\int \frac{|\tilde{f}|^p}{p}+\frac{|\tilde{h}|^{p'}}{p'}-|\tilde{f}\tilde{h}|=0$. By Young's inequality, 3A.3 and Problem 2 this is equivalent to $|\tilde{f}(x)|^p=|\tilde{h}(x)|^{p'}$ almost everywhere
+
+    Conversely, suppose $|f(x)|^p=c|h(x)|^{p'}$ almost everywhere. Then it is easy to see that Holder's inequality is an equality.
+
+    \item[6] We have \[\int|fh|=\int |f|||h||_\infty\iff \int |f|(||h||_\infty-|h|)=0 \]
+
+    This integral is $\int \chi_E |f|(||h||_\infty-|h|)$ where $E=\{x:f(x)\neq 0 \text{ and }|h(x)|<||h||_\infty\}$. Hence by 3A.3 this integral is zero if and only if $\mu(E)=0$.
+
+    The given condition is $\mu\{x:f(x)\neq 0,|h(x)| \neq ||h||_\infty\}=0$. This is equivalent by Problem 4.
+
+    \item[7] Let $\tilde{f}=|f|^r$ and $\tilde{h}=|h|^r$. Then apply Holder's inequality
+
+    \item[8] \begin{claim}
+        Suppose $\frac{1}{p_1}+..+\frac{1}{p_n}=\frac{1}{p}$. Then $||f_1f_2..f_n||_p\leq||f_1||_{p_1}..||f_n||_{p_n}$
+    \end{claim}
+
+    \begin{proof}
+        Let $\frac{1}{p_1}+..+\frac{1}{p_n}=\frac{1}{q}$.
+        
+        We have $||f_1 f_2..f_{n+1}||_p\leq ||f_{n+1}||_{p_{n+1}}||f_1f_2..f_n||_q$. Now apply the induction hypothesis.
+    \end{proof}
+
+    \item[10] We need only prove b), and the case $q=\infty$ is trivial. It suffices to prove the following claim
+
+    \begin{claim}
+        Let $x_1,x_2,..,x_n>0$. Define, for $\alpha > 0$, $g(\alpha)=(x_1^\alpha+..+x_n^\alpha)^{1/\alpha}$. Then $g$ is decreasing
+    \end{claim}
+
+    \begin{proof}
+        Let $\alpha_1 < \alpha_2$. Define $p_i=\frac{x_i^{\alpha_1}}{g(\alpha_1)^{\alpha_1}}$. Then $\sum p_i=1$, so $\sum p_i^\frac{\alpha_2}{\alpha_1}\leq 1$. If we expand this we get $g(\alpha_2)^{\alpha_2}\leq g(\alpha_1)^{\alpha_2}$, so we are done.
+    \end{proof}
+
+    \item[11] The harmonic sequence
+\end{itemize}
+
+\subsection*{7B}
+\begin{itemize}
+    \item [1] We have $||e_i||=1$ and $||e_1+e_2||=2^\frac{1}{p}>2$ so the triangle inequality is not satisfied.
+    \item[2] Consider $\{(a_1,a_2,..,a_n,0,0,..):a_i \text{ has rational coordinates}\}$ to see that $\ell^p$ is separable.
+
+    Consider $\{0,1\}^{\mathbf{Z}_+}$ to see that any dense subset of $\ell^\infty$ must be uncountable.
+
+    \item[3] Let $S \subseteq \mathcal{L}^p(\mathbb{R})$ be step functions such that coefficients are in $\mathbb{Q}[i]$ and intervals have both endpoints rational.
+
+    \begin{claim}
+        $\tilde{S}$ is dense in $L^p(\mathbb{R})$
+    \end{claim}
+
+    \begin{proof}
+        Let $\tilde{f} \in L^p(\mathbb{R}) \text{ and } \epsilon > 0$. By 7A.18 there is a step function $g \in \mathcal{L}^p(\mathbb{R})$ such that $||f-g||_p<\frac{\epsilon}{2}$. We put $g=a_1\chi_{I_1}+..+a_n\chi_{I_n}$ where we assume all intervals are disjoint and bounded. Now get nontrivial intervals $J_i\supset I_i$ with rational endpoints such that $\ell(J_i)-\ell(I_i)<(\frac{\epsilon}{4n|a_i|})^p$. Then get $b_1,b_2,..,b_n$ with rational coordinates  such that $|a_i-b_i|<\frac{\epsilon}{4n(\ell(J_i))^\frac{1}{p}}$. Now let $h=b_1\chi_{J_1}+..+b_n\chi_{J_n}$. Now $||\tilde{f}-\tilde{h}||_p=||f-g+g-h||_p < \frac{\epsilon}{2}+\sum||a_i\chi_{I_i}-b_i\chi_{J_i}||_p \leq \epsilon$
+    \end{proof}
+
+    Consider $\{f:\mathbb{R}\to\{0,1\}:|f[n,n+1)|=1\}\subseteq \mathcal{L}^\infty(\mathbb{R})$. The image in $L^\infty(\mathbb{R})$ is uncountable and pairwise distance is 1.
+
+
+\end{itemize}
+
+\section*{Chapter 8}
+\subsection*{8A}
+\begin{itemize}
+    \item[1] To see definiteness, note that the only function identically zero on the rationals is the zero function. 
+    \item [3] If we expand the equation, we get Re$\langle f,g\rangle=0$. To see that it doesn't work in the complex case, set $f=e^{\frac{i\pi}{4}}$ and $g=e^{-\frac{i\pi}{4}}$
+    \item[4] Set $a=\frac{1}{2}(1,6,3)$ and $b=(4.5,1,-3.5)$
+    \item[5] Apply Cauchy-Schwarz to $(\frac{1}{\sqrt{a}},\frac{1}{\sqrt{b}},\frac{1}{\sqrt{c}},\frac{1}{\sqrt{d}})$ and $(\sqrt{a},\sqrt{b},\sqrt{c},\sqrt{d})$
+    \item[9] arccos is defined only on $[-1,1]$ 
+    \item[11] We have $\langle sf+tg,sf+tg\rangle=\langle tf+sg,tf+sg\rangle \iff (s^2-t^2)(||f||^2-||g||^2)=0$
+    \item[12] $\langle f-g,f-g\rangle=0$ 
+    \item[13] trivial
+    \item[14] trivial 
+\end{itemize}
+
+\subsection*{8B}
+\begin{itemize}
+    \item [1] Define $s_n=(1,\frac{1}{2},..,\frac{1}{n},0,0,..)\in \ell^1$. Then $s_1,s_2,..$ is a Cauchy sequence. If it converged it would converge to $(1,\frac{1}{2},..)\notin \ell^1$
+
+    To see that $C[0,1]$ is not a Hilbert space, the functions of 6C.9 suffice, with the same argument.
+    \item[5] See page 31 of Rudin
+    \item[8] Let $x,y \in \overline{U}$. Let $\epsilon>0$. Get $x',y' \in U$ with $||x-x'||,||y-y'||<\epsilon$. Then $||tx+(1-t)y-(tx'+(1-t)y')||\leq \epsilon$
+    \item[9] Let $x,y \in \text{int } U$. Then $B(r,x),B(r,y)\subseteq U$. Let $z \in B(r,tx+(1-t)y)$. Then $z-tx+(1-t)y+x ,z-tx+(1-t)y+y\in U$. Now use convexity.
+\end{itemize}
+\end{document}
