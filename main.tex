@@ -74,24 +74,32 @@ This document contains solutions to the textbook MIRA, available at \\ measure.a
 
 \section*{Chapter 2}
 \subsection*{2A}
-\begin{itemize}
-    \item[1] LHS $\leq$ RHS by countable sub additivity. The other direction follows by inclusion
-    \item[2]  $I_1,I_2,..$ are open intervals that cover A if and only if $tI_1,tI_2,..$ are open intervals that cover $tA$.
-    \item[3]
+\begin{enumerate}
+    \item LHS $\leq$ RHS by countable sub additivity. The other direction follows by inclusion
+    \item  $I_1,I_2,..$ are open intervals that cover A if and only if $tI_1,tI_2,..$ are open intervals that cover $tA$.
+    \item
     $B= (B\setminus A )\sqcup (B \cap A)$. Now use countable sub additivity
-    \item[4]
+    \item
     See Heine-Borel theorem
-    \item[5]
+    \item
     See Theorem 26.9, Munkres
-    \item[6]
+    \item
     $(a,b)\cup\{a\}\cup\{b\}=[a,b]$. Now use countable sub additivity and inclusion.
-    \item[7]
+    \item
     The implication from LHS to RHS is obvious. For the other direction, see Problem 11
-    \item[8]
+    \item
     LHS $\leq$ RHS follows by countable sub additivity. Let $I_1,I_2..$ be open intervals that cover $A$. Then $I_1\cap(-t,t),I_2\cap(-t,t)...,$ cover $A\cap(-t,t)$, $I_1\cap(t,\infty),I_2\cap(t,\infty)...,$ cover $A\cap(t,\infty)$,  $I_1\cap(-\infty,-t),I_2\cap(-\infty,-t)...,$ cover $A\cap(-\infty,-t)$. We have $\sum l(I_k)\geq \sum l(I_k \cap(-t,t)+\sum l(I_k \cap(t,\infty)+\sum l(I_k \cap(-\infty,-t)\geq |A\cap(-t,t)|+|A\cap(t,\infty)|+|A\cap(-\infty,t)|$. Now use countable sub additivity
-    \item[10]
+    
+    \item Let $E_n= A \cap [-n,n]$. Let $M = \text{lim}|E_n|$. 
+    Let $\epsilon > 0$. 
+    We have $n_k$ such that $|E_{n_k}| \geq M - \frac{\epsilon}{2^k}$. 
+    From the previous problem we have $|E_{n_{k+1}} \setminus E_{n_k}| = |E_{n_{k+1}}| - |E_{n_k}| \leq \frac{\epsilon}{2^k}$. 
+    Since $A= E_{n_1} \bigcup (E_{n_{k+1}} \setminus E_{n_k})$ from countable subadditivity we get $|A| \leq M +\epsilon$ which completes the proof
+
+    \item
     Use countable sub additivity and inclusion
-    \item[11]
+    
+    \item
     
     Let $\{J_k\}$ be open intervals covering $\bigcup I_k$. We need to show
     \[- \epsilon +\sum_{k=1}^Nl(I_k)  \leq \sum_{k=1}^{M}l(J_k)\] for some $M$. Let $I_k=(a_k,b_k)$. 
@@ -105,16 +113,17 @@ This document contains solutions to the textbook MIRA, available at \\ measure.a
 
     Now $\{J_i\cap (a_k+\frac{\epsilon}{2N},b_k-\frac{\epsilon}{2N})\}_k$ are disjoint open intervals within $J_i$. Hence we have $l(J_i) \geq \sum_k l(J_i\cap (a_k+\frac{\epsilon}{2N},b_k-\frac{\epsilon}{2N}))$. Hence, switching the order of the summation we get what we want.
 
-    \item[12]
+    \item
     It is obvious that this set is closed. $(a,b) \subseteq \mathbb{R} \setminus \bigcup (r_k-\frac{1}{2^k},r_k+\frac{1}{2^k})$ is not possible since $(a,b)$ contains a rational. Countable subadditivity tells us $|F|=\infty$
 
-    \item [13]
+    \item 
     Let $q_1,q_2,..$ be the rationals in $[0,1]$. Let $G= \bigcup_{k=1}^\infty(q_k-\frac{\epsilon}{2^{k+1}},q_k + \frac{\epsilon}{2^{k+1}})$. $|G| \leq \epsilon$. Then $[0,1] \setminus G$ is the required set
 
-    \item[14]
+    \item
     It is not a straight line
     
-\end{itemize}
+\end{enumerate}
+
 \subsection*{2B}
 \begin{enumerate}
     \item  This is obvious

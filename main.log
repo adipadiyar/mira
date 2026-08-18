@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.29)  16 AUG 2026 18:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.29)  18 AUG 2026 11:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -282,47 +282,47 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5]
-Overfull \hbox (92.01689pt too wide) in paragraph at lines 230--231
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6]
+Overfull \hbox (92.01689pt too wide) in paragraph at lines 239--240
 []\OT1/cmr/m/n/10 Consider the mea-sur-able space $(\U/msb/m/n/10 R\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 S\OT1/cmr/m/n/10 )$ where $\OMS/cmsy/m/n/10 S$ \OT1/cmr/m/n/10 is all unions of $(\OMS/cmsy/m/n/10 ^^@1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0]\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1)\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 [1\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 [[]\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 1\OT1/cmr/m/n/10 )$.
  []
 
-[6] [7]
-Overfull \hbox (20.792pt too wide) in paragraph at lines 297--298
+[7]
+Overfull \hbox (20.792pt too wide) in paragraph at lines 306--307
 []\OT1/cmr/m/n/10 Now we must ver-ify uni-form con-ver-gence. Let $\OML/cmm/m/it/10 n > \OT1/cmr/m/n/10 0$. Since $\OML/cmm/m/it/10 E \OMS/cmsy/m/n/10 ^^R \OML/cmm/m/it/10 A[]; f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 >
  []
 
 [8]
-Overfull \hbox (39.60666pt too wide) in paragraph at lines 328--332
+Overfull \hbox (39.60666pt too wide) in paragraph at lines 337--341
 \OT1/cmr/m/n/10 given by $\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = []$ 
  []
 
 
-Overfull \hbox (57.56436pt too wide) in paragraph at lines 335--336
+Overfull \hbox (57.56436pt too wide) in paragraph at lines 344--345
 []\OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 P$ \OT1/cmr/m/n/10 be a par-ti-tion of $\U/msb/m/n/10 Z[]$\OT1/cmr/m/n/10 . Then $\OMS/cmsy/m/n/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 b; P\OT1/cmr/m/n/10 ) = [] \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 A[]\OMS/cmsy/m/n/10 j[][]\OML/cmm/m/it/10 b \OT1/cmr/m/n/10 = [][] \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 A[]\OMS/cmsy/m/n/10 j[][]\OML/cmm/m/it/10 b \OMS/cmsy/m/n/10 ^^T
  []
 
 
-Overfull \hbox (24.5069pt too wide) in paragraph at lines 345--346
+Overfull \hbox (24.5069pt too wide) in paragraph at lines 354--355
 []\OT1/cmr/m/n/10 Also $[][] \OML/cmm/m/it/10 w\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^T L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f; P\OT1/cmr/m/n/10 )$ where $\OML/cmm/m/it/10 P$ \OT1/cmr/m/n/10 is the par-ti-tion $\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 g\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 g\OML/cmm/m/it/10 ; ::; \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 g\OML/cmm/m/it/10 ; X \OMS/cmsy/m/n/10 n
  []
 
-
-Overfull \hbox (5.4181pt too wide) in paragraph at lines 350--351
+[9]
+Overfull \hbox (5.4181pt too wide) in paragraph at lines 359--360
 []\OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 E[]; E[]; :: \OMS/cmsy/m/n/10 2 S$ \OT1/cmr/m/n/10 be dis-joint. Then $\OML/cmm/m/it/10 ^^W\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 E[]\OT1/cmr/m/n/10 ) = [] \OML/cmm/m/it/10 ^^_[]fd^^V \OT1/cmr/m/n/10 = []([] \OML/cmm/m/it/10 ^^_[]f\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 d^^V$\OT1/cmr/m/n/10 .
  []
 
-[9]
-Overfull \hbox (11.55605pt too wide) in paragraph at lines 375--376
+
+Overfull \hbox (11.55605pt too wide) in paragraph at lines 384--385
 []\OT1/cmr/m/n/10 We also have $\OMS/cmsy/m/n/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f; P[]\OT1/cmr/m/n/10 ) = [][] \OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 S[]\OT1/cmr/m/n/10 )[][]\OML/cmm/m/it/10 f \OT1/cmr/m/n/10 = [][] [][] \OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 S[] \OMS/cmsy/m/n/10 \ \OML/cmm/m/it/10 E[]\OT1/cmr/m/n/10 )[][]\OML/cmm/m/it/10 f$ 
  []
 
 [10] [11] [12]
-Overfull \hbox (37.81511pt too wide) in paragraph at lines 485--486
+Overfull \hbox (37.81511pt too wide) in paragraph at lines 494--495
 \OT1/cmr/m/n/10 hence mea-sur-able. Now $\OML/cmm/m/it/10 h \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Prod  \OMS/cmsy/m/n/10 ^^N \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f; g\OT1/cmr/m/n/10 )$. So $\OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; \OMS/cmsy/m/n/10 1\OT1/cmr/m/n/10 ) = (\OML/cmm/m/it/10 f; g\OT1/cmr/m/n/10 )[](\OML/cmm/m/it/10 Prod[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; \OMS/cmsy/m/n/10 1\OT1/cmr/m/n/10 ))$. 
  []
 
-[13] [14] [15] [16] [17] [18] (./main.aux)
+[13] [14] [15] [16] [17] [18] [19] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -331,18 +331,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 9775 strings out of 469515
- 145510 string characters out of 5470807
- 565327 words of memory out of 5000000
+ 9790 strings out of 469515
+ 145614 string characters out of 5470807
+ 566327 words of memory out of 5000000
  38264 multiletter control sequences out of 15000+600000
  636884 words of font info for 75 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,10n,79p,750b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,750b,580s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/padiyar/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (18 pages, 283257 bytes).
+Output written on main.pdf (19 pages, 284710 bytes).
 PDF statistics:
- 235 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
- 57 named destinations out of 1000 (max. 500000)
+ 256 PDF objects out of 1000 (max. 8388607)
+ 194 compressed objects within 2 object streams
+ 72 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
